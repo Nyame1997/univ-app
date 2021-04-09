@@ -34,6 +34,9 @@
             <li>
                 <a class="dropdown-trigger" data-target="dropdown1">Students<i class="material-icons right">arrow_drop_down</i></a>
             </li>
+            <% if logged_in? %>
+              <li><%= link_to 'View Profile', student_path(current_user) %></li>
+            <% end %>
             <li><%= session_link %></li>
           </ul>
         </div>
@@ -48,5 +51,8 @@
   <li>
     <a class="dropdown-trigger" data-target="dropdown2">Students<i class="material-icons right">arrow_drop_down</i></a>
   </li>
+  <% if logged_in? %>
+    <li><%= link_to 'View Profile', student_path(current_user) %></li>
+  <% end %>
   <li><%= session_link %></li>
 </ul>
