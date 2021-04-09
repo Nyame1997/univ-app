@@ -19,13 +19,19 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     if @student.save 
       flash[:notice] = "You have successfully signed up!"
-      redirect_to students_path
+      redirect_to @student
     else
       render 'new'
     end
   end
 
   def update
+    if @student.update(student_params)
+      flash[:notice] = "You have successfully updated your account!"
+      redirect_to @student
+    else
+      render 'edit'
+    end
   end
 
   # DELETE /students/1 or /students/1.json
