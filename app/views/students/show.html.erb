@@ -7,9 +7,11 @@
         <p><b>Email</b>: <%= @student.email %></p>
         <p><b>Course Enrollment</b>: None</p>
       </div>
-      <div class="card-action">
-        <%= link_to '<i class="material-icons right">edit</i>Edit Profile'.html_safe, edit_student_path(@student), class: "btn orange waves-effect waves-light btn" %>
-      </div>
+      <% if current_user == @student %>
+        <div class="card-action">
+            <%= link_to '<i class="material-icons right">edit</i>Edit Profile'.html_safe, edit_student_path(@student), class: "btn orange waves-effect waves-light btn" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
