@@ -1,0 +1,48 @@
+
+<div class="container">
+  <%= render 'shared/errors', obj: @course %>
+  <div class="row center sign-up-form">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+        
+        <h3 class="header">
+            <%= @course.new_record? ? "Create Course" : "Edit Course" %>
+        </h3>
+        
+        <div class="row">
+          <%= form_for(@course, html: {class: "col s12"}) do |f| %>
+          
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :name, placeholder: "Enter Name of Course", autofocus: true %>
+                <%= f.label :name %>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :short_name, placeholder: "Course Code", autofocus: true %>
+                <%= f.label :short_name %>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_area :description, placeholder: "Description", autofocus: true, id: "textarea1", class: "materialize-textarea" %>
+                <%= f.label :description, for: "textarea1" %>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.button(@course.new_record? ? "Create Course" : "Update Course", class: "btn red lighten-3 waves-effect waves-light btn right") %>
+              </div>
+            </div>
+            
+          <% end %>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
