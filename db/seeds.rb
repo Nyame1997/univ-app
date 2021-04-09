@@ -9,3 +9,7 @@
 Course.create(short_name: 'CS111', name: 'Intro to Computer Science', description: 'An introduction to Computer Science')
 Course.create(short_name: 'CS112', name: 'Computer Science Basics', description: 'Covers more advanced basics of Computer Science')
 Course.create(short_name: 'ENG100', name: 'Beginner English', description: 'Beginner Course in English and Writing')
+
+Student.create(name: 'Jason Todd', email: 'jasontodd@example.com')
+Student.create(name: 'Donna Troy', email: 'donnatroy@example.com')
+Student.create(name: 'Conner Kent', email: 'connerkent@example.com')
