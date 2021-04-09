@@ -15,21 +15,21 @@
             <div class="row">
               <div class="input-field col s12">
                 <%= f.text_field :name, placeholder: "Enter Name of Course", autofocus: true %>
-                <%= f.label :name %>
+                <%= f.label :name, class: "active" %>
               </div>
             </div>
             
             <div class="row">
               <div class="input-field col s12">
                 <%= f.text_field :short_name, placeholder: "Course Code", autofocus: true %>
-                <%= f.label :short_name %>
+                <%= f.label :short_name, class: "active" %>
               </div>
             </div>
             
             <div class="row">
               <div class="input-field col s12">
                 <%= f.text_area :description, placeholder: "Description", autofocus: true, id: "textarea1", class: "materialize-textarea" %>
-                <%= f.label :description, for: "textarea1" %>
+                <%= f.label :description, for: "textarea1", class: "active" %>
               </div>
             </div>
             
