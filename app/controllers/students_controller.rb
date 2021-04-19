@@ -20,6 +20,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save 
+      session[:student_id] = @student.id
       flash[:notice] = "You have successfully signed up!"
       redirect_to @student
     else
